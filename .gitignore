@@ -1,0 +1,9 @@
+# unrelated projects / build junk
+site/
+_unused-assets/
+node_modules/
+.vercel/
+.DS_Store
+Thumbs.db
+_fb.ttf
+_fr.ttf

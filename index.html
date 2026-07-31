@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>inFlow — Awwwards-grade websites &amp; AI films for real estate</title>
+<meta name="description" content="inFlow builds Awwwards-grade presentation websites and AI films for real-estate developers — one project, live in days, studio quality from $1,000. Batumi · Tbilisi · Turkey.">
+<meta name="keywords" content="real estate website, developer presentation site, property landing page, AI real estate video, 3D property tour, Awwwards real estate, Batumi property, Tbilisi, Turkey real estate marketing, presale website, inFlow">
+<meta name="author" content="inFlow">
+<link rel="canonical" href="https://inflow.website/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="inFlow">
+<meta property="og:title" content="inFlow — Awwwards-grade websites & AI films for real estate">
+<meta property="og:description" content="One project, one page, live in days. Studio quality from $1,000 — the link your sales team sends at 10 p.m.">
+<meta property="og:url" content="https://inflow.website/">
+<meta property="og:image" content="https://inflow.website/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="inFlow — Awwwards-grade websites & AI films for real estate">
+<meta name="twitter:description" content="One project, one page, live in days. Studio quality from $1,000.">
+<meta name="twitter:image" content="https://inflow.website/og.png">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"inFlow","url":"https://inflow.website/","image":"https://inflow.website/og.png","logo":"https://inflow.website/icon-512.png","description":"Awwwards-grade presentation websites and AI films for real-estate developers. One project, live in days.","priceRange":"$1,000–$3,300","telephone":"+380635503585","areaServed":[{"@type":"Country","name":"Georgia"},{"@type":"Country","name":"Turkey"}],"serviceType":["Real-estate presentation website","AI real-estate video","3D architectural visualization"],"knowsLanguage":["en","ru"]}
+</script>
+<style>
+  :root{
+    --bg:#0A0A0B;
+    --bg-2:#101012;
+    --bg-3:#16161A;
+    --line:rgba(255,255,255,.10);
+    --fg:#F5F3F0;
+    --muted:#8C8983;
+    --dim:#CFCCC7;
+    --accent:#D8B26E;
+    --accent-dim:rgba(216,178,110,.14);
+    --grid:rgba(255,255,255,.05);
+    --nav-bg:rgba(10,10,11,.72);
+    --card-sh:0 34px 66px -34px rgba(0,0,0,.9);
+    --max:1080px;
+    --r:16px;
+  }
+  body.light{
+    --bg:#F5F3EF;
+    --bg-2:#ECE9E2;
+    --bg-3:#E3DFD6;
+    --line:rgba(20,18,15,.14);
+    --fg:#17150F;
+    --muted:#726D63;
+    --dim:#403C34;
+    --accent:#9C6D1E;
+    --accent-dim:rgba(156,109,30,.12);
+    --grid:rgba(20,18,15,.06);
+    --nav-bg:rgba(245,243,239,.78);
+    --card-sh:0 26px 54px -30px rgba(40,32,15,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px;line-height:1.6;letter-spacing:-.011em;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .5s,color .5s;
+  }
+  .grid-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:46px 46px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 38%,#000 35%,transparent 82%);
+            mask-image:radial-gradient(ellipse 80% 60% at 50% 38%,#000 35%,transparent 82%)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  section{padding:clamp(60px,9vw,120px) 0;position:relative}
+
+  h1{font-size:clamp(44px,10vw,104px);line-height:.98;letter-spacing:-.045em;font-weight:660}
+  h2{font-size:clamp(30px,5.4vw,58px);line-height:1.04;letter-spacing:-.04em;font-weight:650}
+  p{color:var(--dim)}
+  .muted{color:var(--muted)}
+  .ac{color:var(--accent)}
+  strong{font-weight:650;color:var(--fg)}
+
+  .kicker{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:650;display:block;margin-bottom:15px}
+  .lead{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:520px;margin-top:18px}
+
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;background:transparent;
+      border-bottom:1px solid transparent;transition:border-color .3s,background .35s,backdrop-filter .35s}
+  nav.on{border-color:var(--line);background:var(--nav-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  .nav-in{max-width:var(--max);margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg)}
+  .brand .logo{color:var(--accent);flex:none}
+  .brand .wm{font-weight:700;font-size:16.5px;letter-spacing:-.01em}
+  .brand .wm b{color:var(--accent);font-weight:700}
+  .nav-sp{flex:1}
+  .tbtn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--bg-2);
+    color:var(--fg);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .18s,border-color .18s}
+  .tbtn:hover{transform:translateY(-1px);border-color:var(--accent)}
+  .wa-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--bg-2);
+    color:var(--accent);display:flex;align-items:center;justify-content:center;text-decoration:none;flex:none;
+    transition:transform .18s,border-color .18s,background .18s}
+  .wa-btn:hover{transform:translateY(-1px);border-color:var(--accent);background:var(--accent-dim)}
+  .tbtn .ic-sun{display:block}.tbtn .ic-moon{display:none}
+  body.light .tbtn .ic-sun{display:none}body.light .tbtn .ic-moon{display:block}
+  .lang{display:flex;border:1px solid var(--line);border-radius:100px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--muted);font:inherit;font-size:12px;font-weight:650;
+    padding:6px 12px;cursor:pointer;letter-spacing:.05em}
+  .lang button.on{background:var(--fg);color:var(--bg)}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    background:var(--accent);color:#1A1408;border:0;border-radius:100px;
+    padding:13px 24px;font:inherit;font-size:15px;font-weight:660;letter-spacing:-.01em;
+    text-decoration:none;cursor:pointer;transition:transform .18s,filter .18s;white-space:nowrap
+  }
+  .btn:hover{transform:translateY(-1px);filter:brightness(1.07)}
+  .btn.sm{padding:9px 16px;font-size:13.5px}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .nav-cta{display:none}
+  @media(min-width:700px){.nav-cta{display:inline-flex}}
+
+  .bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:60;transition:width .1s linear}
+
+  /* hero + lamp (vanilla port of the aceternity Lamp) — full-bleed */
+  .hero{--lamp:216,178,110;position:relative;overflow:hidden;min-height:86vh;
+    width:100vw;margin-left:calc(50% - 50vw);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:112px 22px 40px}
+  .hero>.kicker,.hero>h1,.hero>.lead{position:relative;z-index:3}
+  .hero .kicker{margin-bottom:18px}
+  .hero h1{max-width:14ch;margin:0 auto;
+    background:linear-gradient(180deg,#FCF9F3 8%,#C79A45 96%);-webkit-background-clip:text;background-clip:text;
+    color:transparent;filter:drop-shadow(0 2px 34px rgba(var(--lamp),.35))}
+  body.light .hero h1{background:linear-gradient(180deg,#2a2205,#9C6D1E);-webkit-background-clip:text;background-clip:text}
+  .hero .lead{margin:20px auto 0;text-align:center}
+  /* subtle warm wash only — no top darkening (nav stays clean until scroll) */
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(120% 55% at 50% 0,rgba(var(--lamp),.06),transparent 62%)}
+  .lamp{position:absolute;top:0;left:0;right:0;height:min(60vh,520px);z-index:2;pointer-events:none;
+    display:flex;align-items:flex-start;justify-content:center;transform-origin:50% 0;
+    animation:lampIn 1s cubic-bezier(.16,1,.3,1) both}
+  @keyframes lampIn{from{opacity:0;transform:scaleX(.72)}to{opacity:1;transform:none}}
+  .lamp .cone{position:absolute;top:100px;height:17rem;width:46rem;max-width:64vw}
+  .lamp .cone.l{right:50%;background-image:conic-gradient(from 68deg at center top,rgba(var(--lamp),.45),transparent 74%);
+    -webkit-mask-image:linear-gradient(to top,transparent 8%,#000);mask-image:linear-gradient(to top,transparent 8%,#000)}
+  .lamp .cone.r{left:50%;background-image:conic-gradient(from 292deg at center top,transparent 26%,rgba(var(--lamp),.45));
+    -webkit-mask-image:linear-gradient(to top,transparent 8%,#000);mask-image:linear-gradient(to top,transparent 8%,#000)}
+  .lamp .halo{position:absolute;top:56px;width:min(1040px,86vw);height:9rem;border-radius:50%;
+    background:rgba(var(--lamp),.42);filter:blur(72px)}
+  .lamp .core{position:absolute;top:74px;width:min(600px,70vw);height:7rem;border-radius:50%;
+    background:rgba(var(--lamp),.55);filter:blur(30px)}
+  .lamp .bar{position:absolute;top:100px;width:min(1500px,94vw);height:2px;border-radius:2px;
+    background:rgba(var(--lamp),.95);box-shadow:0 0 24px 3px rgba(var(--lamp),.7);
+    -webkit-mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);
+            mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent)}
+  @media (prefers-reduced-motion:reduce){.lamp{animation:none}}
+
+  /* ===================== SHOWCASE: websites (card stack) ===================== */
+  #work{padding-top:clamp(40px,6vw,70px)}
+  .sec-head{text-align:center;margin-bottom:38px}
+  .stack{position:relative;display:flex;flex-direction:column;align-items:center;gap:26px}
+  .stack-stage{position:relative;width:min(500px,88vw);aspect-ratio:16/9;perspective:1500px}
+  .stack-list{position:relative;width:100%;height:100%;list-style:none}
+  .stack-card{position:absolute;inset:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+    background:var(--bg-3);box-shadow:var(--card-sh);
+    transition:transform .6s cubic-bezier(.16,1,.3,1),filter .6s cubic-bezier(.16,1,.3,1),opacity .45s;
+    will-change:transform;transform-origin:center bottom;cursor:grab;touch-action:pan-y;user-select:none}
+  .stack-card.dragging{transition:none;cursor:grabbing}
+  .stack-card video{width:100%;height:100%;object-fit:cover;display:block;background:#000;pointer-events:none}
+  .stack-cap{display:none}
+  .stack-ui{display:flex;align-items:center;gap:18px}
+  .stack-nav{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--bg-2);
+    color:var(--fg);font-size:19px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+    transition:transform .18s,border-color .18s}
+  .stack-nav:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .stack-dots{display:flex;gap:7px}
+  .stack-dots i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:.3s;cursor:pointer}
+  .stack-dots i.on{background:var(--accent);width:22px;border-radius:4px}
+  /* bottom info card (ref style) */
+  .stack-bar{margin-top:2px;text-align:center;background:var(--bg-2);border:1px solid var(--line);
+    border-radius:14px;padding:14px 26px;min-width:min(420px,86vw);backdrop-filter:blur(8px)}
+  .stack-bar b{display:block;font-size:16px;font-weight:640;letter-spacing:-.02em;color:var(--fg)}
+  .stack-bar .sb-sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+  .stack-bar .sb-sub em{font-style:normal;color:var(--accent);font-weight:700}
+
+  /* ===================== SHOWCASE: AI films (folder) ===================== */
+  .films-wrap{margin-top:44px}
+  .folder{position:relative;width:100%;max-width:520px;margin:0 auto}
+  .fstrip{position:relative;height:400px;display:flex;justify-content:center;align-items:flex-end;cursor:pointer}
+  .folder.open .fstrip{cursor:default}
+  .fcard{position:absolute;bottom:70px;width:154px;aspect-ratio:9/16;border-radius:14px;overflow:hidden;
+    border:1px solid var(--line);box-shadow:0 24px 46px rgba(0,0,0,.55);background:#000;
+    transform-origin:bottom center;opacity:1;
+    transition:transform .6s cubic-bezier(.16,1,.3,1),opacity .45s}
+  .fcard video,.fcard img{width:100%;height:100%;object-fit:cover;display:block}
+  .fcard .tagai{position:absolute;top:9px;left:9px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:700;color:#fff;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.2);
+    padding:3px 7px;border-radius:6px;backdrop-filter:blur(4px)}
+  .folder-front{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(320px,82%);height:60px;
+    border:0;background:none;cursor:pointer;z-index:40;transition:transform .5s cubic-bezier(.16,1,.3,1),opacity .45s}
+  .folder-front .body{width:100%;height:100%;background:var(--bg-2);
+    border:1px solid var(--line);border-radius:14px;position:relative;display:flex;align-items:center;
+    gap:10px;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+  .folder-front .label{font-size:13.5px;font-weight:640;letter-spacing:.01em;color:var(--fg)}
+  .folder-front .chev{color:var(--accent);font-size:15px;line-height:1;animation:bob 1.8s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  .folder-front::after{content:"";position:absolute;inset:-5px;border-radius:18px;border:1px solid var(--accent);
+    opacity:0;animation:fpulse 2.6s ease-out infinite;pointer-events:none}
+  @keyframes fpulse{0%{opacity:.45;transform:scale(.98)}70%{opacity:0;transform:scale(1.05)}100%{opacity:0}}
+  .folder-front:hover{transform:translateX(-50%) translateY(-4px)}
+  .folder.open .folder-front{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(50px)}
+  .folder.open .folder-front::after{display:none}
+  .folder-hint{text-align:center;margin-top:18px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);opacity:0;transition:opacity .4s}
+  .folder.open .folder-hint{opacity:1}
+  /* open = filmstrip */
+  .folder.open .fstrip{height:auto;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;
+    padding:10px 4px 22px;gap:16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .folder.open .fstrip::-webkit-scrollbar{height:6px}
+  .folder.open .fstrip::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+  .folder.open .fcard{position:relative!important;bottom:auto;transform:none!important;
+    flex:0 0 auto;width:clamp(150px,44vw,190px);scroll-snap-align:center}
+
+  .vspin{position:absolute;top:50%;left:50%;width:26px;height:26px;margin:-13px 0 0 -13px;z-index:4;
+    border:2px solid rgba(255,255,255,.25);border-top-color:#fff;border-radius:50%;opacity:0;
+    animation:vspin .8s linear infinite;transition:opacity .3s;pointer-events:none}
+  .stack-card.loading .vspin,.fcard.loading .vspin{opacity:.85}
+  @keyframes vspin{to{transform:rotate(360deg)}}
+
+  /* final */
+  .final{text-align:center}
+  .final h2{max-width:16ch;margin:0 auto}
+  .final .price{font-size:clamp(40px,8vw,84px);font-weight:660;letter-spacing:-.045em;line-height:1;margin-bottom:8px}
+  .final .lead{margin:0 auto 34px;text-align:center}
+  .final .btn{margin-top:0}
+  .final .mail{margin-top:20px;font-size:14px;color:var(--muted)}
+
+  footer{padding:30px 0 52px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px}
+
+  .rv{opacity:0;transform:translateY(20px);transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1)}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .rv{opacity:1!important;transform:none!important;transition:none!important}
+    .stack-card,.fcard,.folder-front{transition:none!important}
+    .vspin,.folder-front .chev,.folder-front::after{animation:none}
+  }
+
+  /* ===================== shared: light beam + sparkles ===================== */
+  .beam{position:absolute;top:7%;left:0;right:0;height:0;z-index:0;pointer-events:none}
+  .beam i{position:absolute;left:50%;top:0;transform:translateX(-50%);border-radius:2px;display:block}
+  .beam .w {width:min(44rem,64vw);height:1px;background:linear-gradient(90deg,transparent,var(--beamc),transparent)}
+  .beam .wb{width:min(44rem,64vw);height:4px;filter:blur(4px);background:linear-gradient(90deg,transparent,var(--beamc),transparent)}
+  .beam .n {width:min(16rem,26vw);height:1px;background:linear-gradient(90deg,transparent,var(--beamc2),transparent)}
+  .beam .nb{width:min(16rem,26vw);height:6px;filter:blur(5px);background:linear-gradient(90deg,transparent,var(--beamc2),transparent)}
+  .sparkles{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .spark-canvas{position:absolute;inset:0;width:100%;height:100%}
+  .sparkles::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(120% 92% at 50% 42%,transparent 52%,var(--bg) 100%)}
+  .sec-in{position:relative;z-index:2;max-width:var(--max);margin:0 auto}
+
+  /* ===================== WHY: pdf silence vs a link that opens ===================== */
+  #why .sec-head{margin-bottom:8px}
+  .why-grid{display:grid;gap:26px;margin-top:38px;align-items:center;position:relative}
+  @media(min-width:860px){.why-grid{grid-template-columns:1fr 1fr;gap:56px}}
+  .chat{background:var(--bg-2);border:1px solid var(--line);border-radius:20px;padding:18px 16px 20px;
+    max-width:400px;width:100%;margin:0 auto;position:relative}
+  .chat-h{display:flex;align-items:center;gap:9px;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:14px}
+  .chat-h .av{width:30px;height:30px;border-radius:50%;background:linear-gradient(140deg,#2C2C31,#1A1A1D);flex:none}
+  .chat-h b{font-size:13.5px;font-weight:620}.chat-h i{font-style:normal;font-size:11px;color:var(--muted);display:block;line-height:1.3}
+  .bub{max-width:88%;padding:10px 13px;border-radius:15px;font-size:14px;line-height:1.4;margin-bottom:9px}
+  .bub.them{background:var(--bg-3);border-bottom-left-radius:5px}
+  .bub.you{background:#2A3B2E;margin-left:auto;border-bottom-right-radius:5px}
+  body.light .bub.you{background:#D8E9DB}
+  .bub .t{display:block;font-size:10px;color:var(--muted);margin-top:4px}
+  .pdf{display:flex;align-items:center;gap:10px}
+  .pdf .ic{width:34px;height:34px;border-radius:8px;background:#3A2A26;color:var(--red);display:flex;
+    align-items:center;justify-content:center;font-size:9.5px;font-weight:750;flex:none}
+  .pdf b{font-size:13px;font-weight:600;display:block}.pdf span{font-size:11px;color:var(--muted)}
+  .silence{border:1px dashed rgba(224,101,74,.4);border-radius:12px;padding:12px;text-align:center;
+    font-size:12.5px;color:var(--red);margin-top:6px}
+  .chat--bad{opacity:.66}
+  .chat--good{border-color:var(--accent);
+    box-shadow:0 0 0 1px var(--accent-dim),0 34px 80px -44px rgba(216,178,110,.7)}
+  .chat-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;
+    background:var(--accent);color:#1A1408;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    padding:5px 12px;border-radius:100px;z-index:3}
+  /* link-preview video inside the good chat */
+  .vidcard{margin-left:auto;max-width:90%;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+    background:#000;position:relative;cursor:pointer;margin-bottom:9px}
+  .vidcard video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#000}
+  .vidcard .play{position:absolute;top:34%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;
+    border-radius:50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(4px);
+    display:flex;align-items:center;justify-content:center;color:#fff;transition:opacity .3s}
+  .vidcard.playing .play{opacity:0}
+  .vidcard .meta{display:flex;align-items:center;gap:8px;padding:9px 11px;background:var(--bg-3)}
+  .vidcard .fav{width:16px;height:16px;border-radius:4px;background:var(--accent);flex:none}
+  .vidcard .url{font-size:11px;color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .why-arrow{display:none}
+  @media(min-width:860px){
+    .why-arrow{display:flex;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;
+      flex-direction:column;align-items:center;gap:6px;color:var(--accent);pointer-events:none}
+    .why-arrow svg{width:64px;height:34px;filter:drop-shadow(0 0 10px rgba(216,178,110,.6));animation:bob 1.8s ease-in-out infinite}
+    .why-arrow span{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  }
+
+  /* ===================== 3D block (full-bleed) ===================== */
+  #threed{position:relative;overflow:hidden;--beamc:#34e0b0;--beamc2:#9affe0;
+    width:100vw;margin-left:calc(50% - 50vw);padding-left:22px;padding-right:22px}
+  .mv-stage{position:relative;height:min(66vh,620px);display:flex;align-items:center;justify-content:center;margin-top:16px}
+  .mv{width:min(62vw,560px);height:100%;background:transparent;--poster-color:transparent;pointer-events:auto;
+    filter:drop-shadow(0 30px 55px rgba(0,0,0,.4))}
+  body.light .mv{filter:drop-shadow(0 22px 44px rgba(40,32,15,.26))}
+  .mv-glow{position:absolute;left:50%;top:52%;width:min(920px,92vw);height:112%;transform:translate(-50%,-50%);z-index:0;
+    pointer-events:none;background:radial-gradient(50% 50% at 50% 50%,rgba(52,224,176,.4),transparent 66%);
+    filter:blur(46px);animation:glowpulse 5.5s ease-in-out infinite}
+  @keyframes glowpulse{0%,100%{opacity:.6;transform:translate(-50%,-50%) scale(.96)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.06)}}
+
+  /* ===================== price (clean, no blue card) ===================== */
+  #demo .price{color:var(--accent)}
+
+  /* headroom so peeking cards don't hit the heading */
+  .stack-stage{margin-top:64px}
+  .vtext{display:block;font-size:14px;line-height:1.4;margin-bottom:8px}
+
+  /* ===================== RENDERS: swipe gallery (Green Lake style) ===================== */
+  #renders{position:relative;overflow:hidden}
+  .swipe{margin-top:38px;position:relative}
+  .swipe-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;padding:6px 2px 20px;cursor:grab;scrollbar-width:none}
+  .swipe-track::-webkit-scrollbar{display:none}
+  .swipe-track.drag{cursor:grabbing;scroll-snap-type:none}
+  .rcard{flex:0 0 auto;width:min(76vw,760px);scroll-snap-align:center;position:relative;
+    border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--bg-3)}
+  .rcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;pointer-events:none}
+  .rcard figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px 14px;pointer-events:none;
+    background:linear-gradient(to top,rgba(0,0,0,.72),transparent)}
+  .rcard figcaption b{color:#fff;font-size:15px;font-weight:640;letter-spacing:-.02em}
+  .rcard .num{position:absolute;top:12px;right:14px;font-size:11px;font-weight:700;letter-spacing:.12em;
+    color:#fff;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.2);padding:3px 8px;border-radius:6px;backdrop-filter:blur(4px)}
+  .swipe-ui{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:6px}
+  .swipe-hint{font-size:12px;color:var(--muted)}
+
+  /* stack: "there are more" hint */
+  .stack-hint{font-size:12px;color:var(--muted);text-align:center;letter-spacing:.04em}
+  .stack-hint b{color:var(--accent);font-weight:700}
+  .stack-nav.pulse{animation:navpulse 1.6s ease-out 3}
+  @keyframes navpulse{0%{box-shadow:0 0 0 0 var(--accent-dim)}70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+  @media (prefers-reduced-motion:reduce){
+    .mv-glow,.why-arrow svg,.stack-nav.pulse{animation:none}
+  }
+
+  /* ===================== mobile optimisation ===================== */
+  @media(max-width:640px){
+    body{font-size:16px}
+    section{padding:clamp(46px,12vw,70px) 0}
+    .sec-head{margin-bottom:26px}
+    .hero{min-height:82vh;padding-top:92px}
+    .lamp .cone{top:82px;max-width:82vw}
+    .lamp .bar{top:82px}.lamp .core{top:60px}.lamp .halo{top:44px}
+    .stack{gap:20px}
+    .rcard{width:84vw}
+    .why-grid{gap:18px}
+    .stack-nav{width:42px;height:42px}
+    #threed{padding-left:16px;padding-right:16px}
+    .mv-stage{height:min(52vh,420px)}
+    .mv{width:84vw}
+    footer{flex-direction:column;gap:8px}
+  }
+
+  /* sticky WhatsApp (all devices), brand style */
+  .wa-fab{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;background:var(--accent);
+    color:#1A1408;display:flex;align-items:center;justify-content:center;z-index:55;
+    box-shadow:0 12px 30px rgba(216,178,110,.4),0 6px 16px rgba(0,0,0,.32);transition:transform .18s,filter .18s}
+  .wa-fab:hover{transform:translateY(-2px);filter:brightness(1.06)}
+  .wa-fab:active{transform:scale(.94)}
+  @media(max-width:640px){.wa-fab{width:50px;height:50px;right:15px;bottom:15px}}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="bar" id="bar"></div>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="inFlow — home">
+      <svg class="logo" viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".4"/>
+        <path d="M6 19 C 10 12, 13 12, 16 16 S 22 20, 26 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M6 23 C 10 16, 13 16, 16 20 S 22 24, 26 17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".45"/>
+      </svg>
+      <span class="wm">in<b>Flow</b></span>
+    </a>
+    <div class="nav-sp"></div>
+    <button id="theme" class="tbtn" aria-label="Toggle light / dark">
+      <svg class="ic-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      <svg class="ic-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <div class="lang">
+      <button id="en" class="on">EN</button>
+      <button id="ru">RU</button>
+    </div>
+    <a class="wa-btn wa" href="https://wa.me/380635503585" aria-label="WhatsApp" target="_blank" rel="noopener">
+      <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.06 8.06 0 0 1 2.37 5.73c0 4.46-3.63 8.09-8.1 8.09a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.12.82.83-3.04-.19-.31a8.06 8.06 0 0 1-1.24-4.32c0-4.46 3.63-8.09 8.1-8.09zm-2.7 3.42c-.13 0-.34.05-.52.24-.18.19-.68.67-.68 1.62 0 .96.7 1.88.8 2.01.1.13 1.37 2.1 3.33 2.94.47.2.83.32 1.11.41.47.15.9.13 1.23.08.38-.06 1.16-.47 1.32-.93.16-.46.16-.85.11-.93-.05-.08-.18-.13-.37-.23-.19-.1-1.16-.57-1.34-.64-.18-.06-.31-.1-.44.1-.13.19-.5.64-.62.77-.11.13-.22.15-.42.05-.19-.1-.82-.3-1.56-.96-.58-.51-.96-1.15-1.08-1.34-.11-.19-.01-.3.08-.39.09-.09.19-.22.29-.34.1-.12.13-.19.19-.32.06-.13.03-.24-.02-.34-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.32-.44-.33h-.37z"/></svg>
+    </a>
+  </div>
+</nav>
+
+<a class="wa-fab wa" href="https://wa.me/380635503585" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.06 8.06 0 0 1 2.37 5.73c0 4.46-3.63 8.09-8.1 8.09a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.12.82.83-3.04-.19-.31a8.06 8.06 0 0 1-1.24-4.32c0-4.46 3.63-8.09 8.1-8.09zm-2.7 3.42c-.13 0-.34.05-.52.24-.18.19-.68.67-.68 1.62 0 .96.7 1.88.8 2.01.1.13 1.37 2.1 3.33 2.94.47.2.83.32 1.11.41.47.15.9.13 1.23.08.38-.06 1.16-.47 1.32-.93.16-.46.16-.85.11-.93-.05-.08-.18-.13-.37-.23-.19-.1-1.16-.57-1.34-.64-.18-.06-.31-.1-.44.1-.13.19-.5.64-.62.77-.11.13-.22.15-.42.05-.19-.1-.82-.3-1.56-.96-.58-.51-.96-1.15-1.08-1.34-.11-.19-.01-.3.08-.39.09-.09.19-.22.29-.34.1-.12.13-.19.19-.32.06-.13.03-.24-.02-.34-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.32-.44-.33h-.37z"/></svg>
+</a>
+
+<div class="wrap">
+
+  <!-- HERO (minimal) -->
+  <section class="hero" id="top">
+    <div class="lamp" aria-hidden="true">
+      <span class="cone l"></span>
+      <span class="cone r"></span>
+      <span class="halo"></span>
+      <span class="core"></span>
+      <span class="bar"></span>
+    </div>
+    <span class="kicker rv" data-en="For developers" data-ru="Для застройщиков">For developers</span>
+    <h1 class="rv" data-en="Be above<br>the market." data-ru="Будь<br>выше рынка.">Be above<br>the market.</h1>
+    <p class="lead rv" data-en="Sites &amp; films that sell one apartment." data-ru="Сайты и ролики, которые продают квартиру.">Sites &amp; films that sell one apartment.</p>
+  </section>
+
+  <!-- WHY: a PDF gets silence, a link gets a reply -->
+  <section id="why">
+    <div class="sec-head rv">
+      <span class="kicker" data-en="Why we exist" data-ru="Зачем мы нужны">Why we exist</span>
+      <h2 data-en="A PDF gets silence.<br><span class='ac'>A link gets a reply.</span>" data-ru="PDF — это тишина.<br><span class='ac'>Ссылка — это ответ.</span>">A PDF gets silence.<br><span class="ac">A link gets a reply.</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="chat chat--bad rv">
+        <div class="bub them" data-en="Hi, can you send details on the project?<span class='t'>22:07</span>" data-ru="Здравствуйте, пришлёте детали по проекту?<span class='t'>22:07</span>">Hi, can you send details on the project?<span class="t">22:07</span></div>
+        <div class="bub you"><div class="pdf"><div class="ic">PDF</div><div><b>Brochure_final_v3.pdf</b><span>27 MB</span></div></div><span class="t" data-en="06:14 · delivered" data-ru="06:14 · доставлено">06:14 · delivered</span></div>
+        <div class="silence" data-en="— no reply —" data-ru="— тишина —">— no reply —</div>
+      </div>
+      <div class="why-arrow"><svg viewBox="0 0 64 34" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17h54M44 7l12 10-12 10"/></svg><span data-en="send this" data-ru="шлите это">send this</span></div>
+      <div class="chat chat--good rv">
+        <span class="chat-tag" data-en="opened in 4 sec" data-ru="открыто за 4 сек">opened in 4 sec</span>
+        <div class="bub you">
+          <span class="vtext" data-en="Something unique — take a look 👇" data-ru="Это что-то уникальное — посмотрите 👇">Something unique — take a look 👇</span>
+          <a class="vidcard" id="whyVid" href="https://sightline-liard.vercel.app/" target="_blank" rel="noopener">
+            <video class="lz" data-src="media/web/web2.mp4" poster="media/web/web2.webp" muted loop playsinline preload="none"></video>
+            <span class="play">&#9654;</span>
+            <span class="meta"><span class="fav"></span><span class="url">yourhome.com</span></span>
+          </a>
+          <span class="t">22:08</span>
+        </div>
+        <div class="bub them" data-en="🔥 love it — when can we talk?<span class='t'>22:11</span>" data-ru="🔥 огонь — когда созвонимся?<span class='t'>22:11</span>">🔥 love it — when can we talk?<span class="t">22:11</span></div>
+      </div>
+    </div>
+    <p class="lead rv" style="margin:34px auto 0;text-align:center" data-en="Everyone sends a 27 MB PDF and a wall of text. We send one link that opens on a phone — and plays." data-ru="Все шлют PDF на 27 МБ и стену текста. Мы шлём одну ссылку, которая открывается на телефоне — и играет.">Everyone sends a 27 MB PDF and a wall of text. We send one link that opens on a phone — and plays.</p>
+  </section>
+
+  <!-- SHOWCASE: WEBSITES (horizontal) -->
+  <section id="work">
+    <div class="sec-head rv">
+      <span class="kicker" data-en="Websites" data-ru="Сайты">Websites</span>
+      <h2 data-en="Awwwards-grade. <span class='ac'>$1–3.3k.</span>" data-ru="Уровень Awwwards. <span class='ac'>$1–3.3k.</span>">Awwwards-grade. <span class="ac">$1–3.3k.</span></h2>
+    </div>
+
+    <!-- TODO Женя: подписи проектов — при необходимости переименуй -->
+    <div class="stack rv" id="stack">
+      <div class="stack-stage" id="stackStage">
+        <ul class="stack-list" id="stackList">
+          <li class="stack-card">
+            <video class="lz" data-src="media/web/web2.mp4" poster="media/web/web2.webp" muted loop playsinline preload="none"></video>
+            <span class="vspin"></span>
+            <div class="stack-cap"><b>Green Lake Village</b><span data-en="Residential · scroll site" data-ru="Жилой комплекс · скролл-сайт">Residential · scroll site</span></div>
+          </li>
+          <li class="stack-card">
+            <video class="lz" data-src="media/web/web1.mp4" poster="media/web/web1.webp" muted loop playsinline preload="none"></video>
+            <span class="vspin"></span>
+            <div class="stack-cap"><b>NORDX</b><span data-en="Brand film site" data-ru="Сайт с бренд-роликом">Brand film site</span></div>
+          </li>
+          <li class="stack-card">
+            <video class="lz" data-src="media/web/web3.mp4" poster="media/web/web3.webp" muted loop playsinline preload="none"></video>
+            <span class="vspin"></span>
+            <div class="stack-cap"><b>Interior Studio</b><span data-en="Design portfolio" data-ru="Портфолио дизайна">Design portfolio</span></div>
+          </li>
+          <li class="stack-card">
+            <video class="lz" data-src="media/web/web4.mp4" poster="media/web/web4.webp" muted loop playsinline preload="none"></video>
+            <span class="vspin"></span>
+            <div class="stack-cap"><b>Immer Realisieren</b><span data-en="Developer, DE market" data-ru="Застройщик, рынок DE">Developer, DE market</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="stack-ui">
+        <button class="stack-nav" id="stackPrev" aria-label="Previous">&#8249;</button>
+        <div class="stack-dots" id="stackDots"></div>
+        <button class="stack-nav" id="stackNext" aria-label="Next">&#8250;</button>
+      </div>
+      <div class="stack-bar">
+        <b id="sbName">Green Lake Village</b>
+        <div class="sb-sub"><span id="sbTag">Residential</span> · <em id="sbIdx">1</em> / <span id="sbTotal">4</span></div>
+      </div>
+      <p class="stack-hint" data-en="<b>4 sites</b> inside — tap ‹ › or drag to switch" data-ru="Внутри <b>4 сайта</b> — листайте ‹ › или тяните"><b>4 sites</b> inside — tap ‹ › or drag to switch</p>
+    </div>
+  </section>
+
+  <!-- SHOWCASE: AI FILMS (vertical) -->
+  <section id="films">
+    <div class="sec-head rv">
+      <span class="kicker" data-en="AI films" data-ru="ИИ-ролики">AI films</span>
+      <h2 data-en="The building <span class='ac'>before it's built.</span>" data-ru="Здание, <span class='ac'>которого ещё нет.</span>">The building <span class="ac">before it's built.</span></h2>
+    </div>
+
+    <div class="films-wrap rv">
+      <div class="folder" id="folder">
+        <div class="fstrip" id="fstrip">
+          <div class="fcard"><span class="tagai">AI</span><span class="vspin"></span><video class="lz" data-src="media/ai/ai1.mp4" poster="media/ai/ai1.webp" muted loop playsinline preload="none"></video></div>
+          <div class="fcard"><span class="tagai">AI</span><span class="vspin"></span><video class="lz" data-src="media/ai/ai2.mp4" poster="media/ai/ai2.webp" muted loop playsinline preload="none"></video></div>
+          <div class="fcard"><span class="tagai">AI</span><span class="vspin"></span><video class="lz" data-src="media/ai/ai3.mp4" poster="media/ai/ai3.webp" muted loop playsinline preload="none"></video></div>
+          <div class="fcard"><span class="tagai">AI</span><span class="vspin"></span><video class="lz" data-src="media/ai/ai4.mp4" poster="media/ai/ai4.webp" muted loop playsinline preload="none"></video></div>
+          <div class="fcard"><span class="tagai">AI</span><span class="vspin"></span><video class="lz" data-src="media/ai/ai5.mp4" poster="media/ai/ai5.webp" muted loop playsinline preload="none"></video></div>
+          <div class="fcard"><span class="tagai">AI</span><span class="vspin"></span><video class="lz" data-src="media/ai/ai6.mp4" poster="media/ai/ai6.webp" muted loop playsinline preload="none"></video></div>
+        </div>
+        <button class="folder-front" id="folderFront" aria-label="Open the films">
+          <span class="body"><span class="label" data-en="Open 6 films" data-ru="Открыть 6 роликов">Open 6 films</span><span class="chev">&#9650;</span></span>
+        </button>
+        <p class="folder-hint" data-en="Scroll sideways · tap a frame" data-ru="Листайте вбок · нажмите на кадр">Scroll sideways · tap a frame</p>
+      </div>
+      <div style="text-align:center;margin-top:10px">
+        <button class="btn ghost sm" id="folderClose" hidden data-en="Close" data-ru="Свернуть">Close</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D block -->
+  <section id="threed">
+    <div class="sparkles" data-spark="52,224,176"><canvas class="spark-canvas"></canvas></div>
+    <div class="beam"><i class="wb"></i><i class="w"></i><i class="nb"></i><i class="n"></i></div>
+    <div class="sec-in">
+      <div class="sec-head rv">
+        <span class="kicker" data-en="Also — 3D" data-ru="А ещё — 3D">Also — 3D</span>
+        <h2 data-en="We build it in <span style='color:#5fe6c0'>3D</span>, too." data-ru="Делаем и в <span style='color:#5fe6c0'>3D</span>.">We build it in <span style="color:#5fe6c0">3D</span>, too.</h2>
+      </div>
+      <div class="mv-stage rv" id="mvStage">
+        <div class="mv-glow"></div>
+        <model-viewer class="mv" data-mv src="media/models/tower.glb"
+          camera-controls auto-rotate rotation-per-second="16deg" auto-rotate-delay="0"
+          interaction-prompt="none" disable-zoom disable-pan touch-action="pan-y"
+          exposure="1.05" shadow-intensity="0" environment-image="neutral"
+          camera-orbit="0deg 80deg 108%" field-of-view="30deg" loading="lazy"></model-viewer>
+      </div>
+      <p class="lead rv" style="margin:6px auto 0;text-align:center" data-en="We make simple 3D animations and drop them straight onto your site — like this one, spinning right here." data-ru="Делаем несложные 3D-анимации и ставим их прямо на ваш сайт — как эта, крутится прямо здесь.">We make simple 3D animations and drop them straight onto your site — like this one, spinning right here.</p>
+    </div>
+  </section>
+
+  <!-- RENDERS: we render your project too (swipe) -->
+  <section id="renders">
+    <div class="sec-head rv">
+      <span class="kicker" data-en="Renders" data-ru="Рендеры">Renders</span>
+      <h2 data-en="We'll render <span class='ac'>your</span> project, too." data-ru="Отрендерим и <span class='ac'>ваш</span> объект.">We'll render <span class="ac">your</span> project, too.</h2>
+    </div>
+    <div class="swipe rv" id="swipe">
+      <div class="swipe-track" id="swipeTrack">
+        <figure class="rcard"><span class="num">01</span><img src="media/renders/r1.webp" loading="lazy" alt="Aerial masterplan render"><figcaption><b data-en="Aerial masterplan" data-ru="Генплан с высоты">Aerial masterplan</b></figcaption></figure>
+        <figure class="rcard"><span class="num">02</span><img src="media/renders/r2.webp" loading="lazy" alt="Clubhouse render"><figcaption><b data-en="Clubhouse" data-ru="Клубный дом">Clubhouse</b></figcaption></figure>
+        <figure class="rcard"><span class="num">03</span><img src="media/renders/r3.webp" loading="lazy" alt="Living space render"><figcaption><b data-en="Living space" data-ru="Гостиная">Living space</b></figcaption></figure>
+        <figure class="rcard"><span class="num">04</span><img src="media/renders/r4.webp" loading="lazy" alt="Japandi interior render"><figcaption><b data-en="Japandi style" data-ru="Стиль японди">Japandi style</b></figcaption></figure>
+        <figure class="rcard"><span class="num">05</span><img src="media/renders/r5.webp" loading="lazy" alt="Neoclassic interior render"><figcaption><b data-en="Neoclassic style" data-ru="Неоклассика">Neoclassic style</b></figcaption></figure>
+        <figure class="rcard"><span class="num">06</span><img src="media/renders/r6.webp" loading="lazy" alt="Industrial interior render"><figcaption><b data-en="Industrial style" data-ru="Индастриал">Industrial style</b></figcaption></figure>
+      </div>
+      <div class="swipe-ui">
+        <button class="stack-nav" id="swipePrev" aria-label="Previous">&#8249;</button>
+        <span class="swipe-hint" data-en="Swipe · any angle, any style" data-ru="Свайп · любой ракурс, любой стиль">Swipe · any angle, any style</span>
+        <button class="stack-nav" id="swipeNext" aria-label="Next">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL (minimal) -->
+  <section class="final" id="demo">
+    <div class="price rv">$1,000–3,300</div>
+    <h2 class="rv" data-en="One project. Live in days." data-ru="Один проект. Запуск за дни.">One project. Live in days.</h2>
+    <p class="lead rv" data-en="Send us one project — get a free 30-second demo in 48 hours." data-ru="Пришлите один проект — через 48 часов бесплатное 30-секундное демо.">Send us one project — get a free 30-second demo in 48 hours.</p>
+    <a class="btn rv wa" href="https://wa.me/380635503585" data-en="Free demo on WhatsApp" data-ru="Демо бесплатно в WhatsApp">Free demo on WhatsApp</a>
+    <p class="mail rv">hello@inflow.website</p>
+  </section>
+
+  <footer>
+    <span>© inFlow · inflow.website</span>
+    <span data-en="Above the market." data-ru="Выше рынка.">Above the market.</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  /* ---------- progress + nav ---------- */
+  var bar=document.getElementById('bar'),nav=document.getElementById('nav');
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(window.scrollY/h)*100:0)+'%';
+    nav.classList.toggle('on',window.scrollY>20);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* ---------- reveal ---------- */
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e,i){
+        if(e.isIntersecting){
+          var el=e.target;
+          setTimeout(function(){el.classList.add('in')},Math.min(i*80,320));
+          io.unobserve(el);
+        }
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('in')})}
+  setTimeout(function(){
+    if(!document.querySelector('.rv.in'))els.forEach(function(e){e.classList.add('in')});
+  },1600);
+
+  /* ---------- theme ---------- */
+  var themeBtn=document.getElementById('theme');
+  function setTheme(t){
+    document.body.classList.toggle('light',t==='light');
+    try{localStorage.setItem('sl_theme',t)}catch(e){}
+  }
+  themeBtn.addEventListener('click',function(){
+    setTheme(document.body.classList.contains('light')?'dark':'light');
+  });
+  var savedT=null;try{savedT=localStorage.getItem('sl_theme')}catch(e){}
+  if(savedT)setTheme(savedT);
+
+  /* ---------- language ---------- */
+  function setLang(l){
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      var v=el.getAttribute('data-'+l);
+      if(v!==null)el.innerHTML=v;
+    });
+    document.getElementById('en').classList.toggle('on',l==='en');
+    document.getElementById('ru').classList.toggle('on',l==='ru');
+    try{localStorage.setItem('sl_lang',l)}catch(e){}
+    var waMsg=l==='ru'
+      ? 'Здравствуйте, inFlow! Хочу бесплатное демо моего объекта.'
+      : "Hi inFlow — I'd like a free demo of my project.";
+    var waHref='https://wa.me/380635503585?text='+encodeURIComponent(waMsg);
+    document.querySelectorAll('.wa').forEach(function(a){a.setAttribute('href',waHref);});
+    if(window.__syncBar)window.__syncBar();
+  }
+  document.getElementById('en').addEventListener('click',function(){setLang('en')});
+  document.getElementById('ru').addEventListener('click',function(){setLang('ru')});
+
+  /* ---------- lazy video helpers ---------- */
+  function loadVid(v){ if(!v||v.dataset.loaded)return; var s=v.getAttribute('data-src'); if(!s)return; v.src=s; v.dataset.loaded='1'; }
+  function pauseVid(v){ if(v&&v.dataset.loaded){ try{v.pause();}catch(e){} } }
+  function activateCard(card){
+    if(!card)return; var v=card.querySelector('video'); if(!v)return;
+    loadVid(v);
+    if(!v.dataset.ready){
+      card.classList.add('loading');
+      var done=function(){ card.classList.remove('loading'); v.dataset.ready='1';
+        v.removeEventListener('playing',done); v.removeEventListener('canplay',done); };
+      v.addEventListener('playing',done); v.addEventListener('canplay',done);
+    }
+    v.muted=true; var p=v.play(); if(p&&p.catch)p.catch(function(){});
+  }
+  function deactivateCard(card){ if(!card)return; card.classList.remove('loading'); pauseVid(card.querySelector('video')); }
+  function whenNear(el,onIn,onOut){
+    if(!('IntersectionObserver' in window)){onIn();return;}
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){ e.isIntersecting?onIn():(onOut&&onOut()); });
+    },{rootMargin:'250px 0px',threshold:.01});
+    io.observe(el);
+  }
+
+  /* ---------- website card stack ---------- */
+  function initStack(){
+    var wrap=document.getElementById('stack'); if(!wrap)return;
+    var stage=document.getElementById('stackStage');
+    var cards=[].slice.call(document.querySelectorAll('#stackList .stack-card'));
+    var dotsEl=document.getElementById('stackDots');
+    var sbName=document.getElementById('sbName'),sbTag=document.getElementById('sbTag'),
+        sbIdx=document.getElementById('sbIdx'),sbTotal=document.getElementById('sbTotal');
+    var n=cards.length; if(!n)return;
+    var cur=0, active=false, timer=null;
+    var SCALE=0.055, DIM=0.13, MAXBACK=4, HOLD=5000;
+    sbTotal.textContent=n;
+    cards.forEach(function(_,i){ var d=document.createElement('i'); d.addEventListener('click',function(){cur=i;render();}); dotsEl.appendChild(d); });
+    var dots=[].slice.call(dotsEl.children);
+    function syncBar(){
+      var cap=cards[cur].querySelector('.stack-cap');
+      sbName.textContent=cap.querySelector('b').textContent;
+      sbTag.innerHTML=cap.querySelector('span').innerHTML;
+      sbIdx.textContent=cur+1;
+    }
+    window.__syncBar=syncBar;
+    function schedule(){ clearTimeout(timer); if(active&&n>1) timer=setTimeout(function(){ cur=(cur+1)%n; render(); },HOLD); }
+    function render(){
+      var OFF=Math.max(16,Math.round(stage.clientHeight*0.085));
+      for(var i=0;i<n;i++){
+        var card=cards[i], depth=(i-cur+n)%n;
+        if(depth>MAXBACK){
+          card.style.opacity='0'; card.style.pointerEvents='none';
+          card.style.transform='translateY('+(-OFF*MAXBACK)+'px) scale('+(1-SCALE*MAXBACK)+')';
+        }else{
+          card.style.opacity='1'; card.style.pointerEvents=depth===0?'auto':'none';
+          card.style.transform='translateY('+(-OFF*depth)+'px) scale('+(1-SCALE*depth)+')';
+          card.style.filter='brightness('+(1-DIM*depth)+')'; card.style.zIndex=String(n-depth);
+          card.classList.toggle('front',depth===0);
+        }
+      }
+      dots.forEach(function(d,i){ d.classList.toggle('on',i===cur); });
+      cards.forEach(function(c,i){ if(i!==cur)deactivateCard(c); });
+      if(active) activateCard(cards[cur]);
+      syncBar(); schedule();
+    }
+    document.getElementById('stackNext').addEventListener('click',function(){cur=(cur+1)%n;render();});
+    document.getElementById('stackPrev').addEventListener('click',function(){cur=(cur-1+n)%n;render();});
+    var sx=0,sy=0,drag=false,fc=null;
+    stage.addEventListener('pointerdown',function(e){ fc=cards[cur]; if(!fc)return; drag=true; sx=e.clientX; sy=e.clientY; fc.classList.add('dragging'); clearTimeout(timer); });
+    window.addEventListener('pointermove',function(e){ if(!drag||!fc)return; var dy=e.clientY-sy,dx=e.clientX-sx; fc.style.transform='translateY('+dy+'px) translateX('+(dx*0.3)+'px) rotate('+(dx*0.02)+'deg)'; });
+    window.addEventListener('pointerup',function(e){ if(!drag||!fc)return; drag=false; fc.classList.remove('dragging'); var dy=e.clientY-sy,dx=e.clientX-sx; if(dy<-50||dx<-60)cur=(cur+1)%n; else if(dy>50||dx>60)cur=(cur-1+n)%n; fc=null; render(); });
+    wrap.tabIndex=0;
+    wrap.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'){cur=(cur+1)%n;render();} else if(e.key==='ArrowLeft'){cur=(cur-1+n)%n;render();} });
+    render();
+    function checkActive(){
+      var r=wrap.getBoundingClientRect(), near=r.top<window.innerHeight+250 && r.bottom>-250;
+      if(near&&!active){active=true;render();}
+      else if(!near&&active){active=false;clearTimeout(timer);cards.forEach(function(c){pauseVid(c.querySelector('video'));});}
+    }
+    whenNear(wrap,checkActive,checkActive);
+    window.addEventListener('scroll',checkActive,{passive:true});
+    setTimeout(checkActive,500); checkActive();
+  }
+
+  /* ---------- AI films folder ---------- */
+  function initFolder(){
+    var folder=document.getElementById('folder'); if(!folder)return;
+    var strip=document.getElementById('fstrip');
+    var front=document.getElementById('folderFront');
+    var closeBtn=document.getElementById('folderClose');
+    var cards=[].slice.call(folder.querySelectorAll('.fcard'));
+    var n=cards.length, FAN=Math.min(5,n), open=false, st=null;
+    var frontIdx=Math.floor(FAN/2);            // centre card of the closed fan
+    function layoutClosed(){
+      cards.forEach(function(card,i){
+        if(i<FAN){
+          var off=i-frontIdx;
+          card.style.opacity='1'; card.style.zIndex=String(20-Math.abs(off));
+          card.style.transform='translateX('+(off*48)+'px) translateY('+(-Math.abs(off)*12)+'px) rotate('+(off*7)+'deg) scale('+(1-Math.abs(off)*0.05)+')';
+        }else{ card.style.opacity='0'; card.style.zIndex='1'; card.style.transform='translateY(0) scale(.9)'; }
+      });
+    }
+    function scan(){
+      if(!open)return;
+      var r=strip.getBoundingClientRect();
+      cards.forEach(function(c){
+        var cr=c.getBoundingClientRect(), vis=cr.right>r.left+10 && cr.left<r.right-10;
+        vis?activateCard(c):deactivateCard(c);
+      });
+    }
+    function setOpen(o){
+      open=o;
+      if(o){ folder.classList.add('open'); closeBtn.hidden=false;
+        cards.forEach(function(c){c.style.transform='';c.style.opacity='1';c.style.zIndex='';});
+        setTimeout(scan,70);
+      }else{ folder.classList.remove('open'); closeBtn.hidden=true;
+        cards.forEach(function(c){pauseVid(c.querySelector('video'));}); layoutClosed(); closedCheck();
+      }
+    }
+    /* closed-state: autoplay the centre card when the block is near the viewport */
+    function closedCheck(){
+      if(open)return;
+      var r=folder.getBoundingClientRect(), near=r.top<window.innerHeight+250 && r.bottom>-250;
+      if(near)activateCard(cards[frontIdx]); else deactivateCard(cards[frontIdx]);
+    }
+    front.addEventListener('click',function(){setOpen(true);});
+    strip.addEventListener('click',function(){ if(!open)setOpen(true); });
+    closeBtn.addEventListener('click',function(){setOpen(false);});
+    strip.addEventListener('scroll',function(){ if(!open)return; if(st)return; st=setTimeout(function(){st=null;scan();},120); },{passive:true});
+    layoutClosed();
+    whenNear(folder,closedCheck,closedCheck);
+    window.addEventListener('scroll',closedCheck,{passive:true});
+    setTimeout(closedCheck,500); closedCheck();
+  }
+
+  /* ---------- sparkles (canvas particles, runs only when near) ---------- */
+  function initSparkles(){
+    [].forEach.call(document.querySelectorAll('.sparkles'),function(wrap){
+      var cv=wrap.querySelector('.spark-canvas'); if(!cv)return;
+      var ctx=cv.getContext('2d'); if(!ctx)return;
+      var col=wrap.getAttribute('data-spark')||'170,255,222';
+      var dpr=Math.min(window.devicePixelRatio||1,2), w=0,h=0,parts=[],raf=0;
+      function size(){var r=wrap.getBoundingClientRect();w=cv.width=Math.max(1,Math.round(r.width*dpr));h=cv.height=Math.max(1,Math.round(r.height*dpr));}
+      function seed(){var n=Math.min(180,Math.round((w*h)/(6500*dpr)));parts=[];for(var i=0;i<n;i++)parts.push({x:Math.random()*w,y:Math.random()*h,r:(Math.random()*1.1+0.35)*dpr,a:Math.random()*6.28,tw:Math.random()*0.05+0.008,vy:-(Math.random()*0.14+0.03)*dpr});}
+      size();seed();window.addEventListener('resize',function(){size();seed();});
+      function loop(){
+        if(document.hidden){raf=0;return;}
+        ctx.clearRect(0,0,w,h);
+        for(var i=0;i<parts.length;i++){var p=parts[i];p.a+=p.tw;p.y+=p.vy;if(p.y<-2){p.y=h+2;p.x=Math.random()*w;}
+          ctx.globalAlpha=0.25+Math.abs(Math.sin(p.a))*0.75;ctx.fillStyle='rgba('+col+',1)';ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.2832);ctx.fill();}
+        ctx.globalAlpha=1;raf=requestAnimationFrame(loop);
+      }
+      whenNear(wrap,function(){if(!raf)raf=requestAnimationFrame(loop);},function(){if(raf){cancelAnimationFrame(raf);raf=0;}});
+      document.addEventListener('visibilitychange',function(){if(!document.hidden&&!raf)raf=requestAnimationFrame(loop);});
+    });
+  }
+
+  /* ---------- 3D model-viewer: lazy load + emerald recolour ---------- */
+  function init3D(){
+    var stage=document.getElementById('mvStage'); if(!stage)return;
+    var loaded=false;
+    function recolor(){
+      var mv=document.querySelector('[data-mv]'); if(!mv)return;
+      var n=0,t=setInterval(function(){
+        try{ var mats=mv.model&&mv.model.materials;
+          if(mats&&mats.length){ mats.forEach(function(m){ var pbr=m.pbrMetallicRoughness;
+            pbr.setBaseColorFactor([0.03,0.58,0.42,1]); pbr.setMetallicFactor(0.5); pbr.setRoughnessFactor(0.3);
+            if(m.setEmissiveFactor)m.setEmissiveFactor([0.02,0.16,0.11]); }); clearInterval(t); }
+        }catch(e){} if(++n>100)clearInterval(t);
+      },200);
+    }
+    function load(){ if(loaded)return; loaded=true;
+      var s=document.createElement('script'); s.type='module';
+      s.src='https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js';
+      document.head.appendChild(s); recolor();
+    }
+    function near(){ var r=stage.getBoundingClientRect(); return r.top<window.innerHeight+400 && r.bottom>-400; }
+    whenNear(stage,load,function(){});
+    window.addEventListener('scroll',function(){ if(near())load(); },{passive:true});
+    setTimeout(function(){ if(near())load(); },700);
+  }
+
+  /* ---------- WHY chat: autoplay the link-preview video when near ---------- */
+  function initWhy(){
+    var card=document.getElementById('whyVid'); if(!card)return;
+    var v=card.querySelector('video');
+    v.addEventListener('playing',function(){card.classList.add('playing');});
+    function near(){ var r=card.getBoundingClientRect(); return r.top<window.innerHeight+200 && r.bottom>-200; }
+    whenNear(card,function(){activateCard(card);},function(){deactivateCard(card);card.classList.remove('playing');});
+    window.addEventListener('scroll',function(){ if(near())activateCard(card); },{passive:true});
+    setTimeout(function(){ if(near())activateCard(card); },700);
+  }
+
+  /* ---------- renders: drag / swipe gallery ---------- */
+  function initSwipe(){
+    var track=document.getElementById('swipeTrack'); if(!track)return;
+    var prev=document.getElementById('swipePrev'), next=document.getElementById('swipeNext');
+    function step(){ var c=track.querySelector('.rcard'); return c?c.getBoundingClientRect().width+18:400; }
+    if(next)next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
+    if(prev)prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});
+    var down=false,sx=0,sl=0;
+    track.addEventListener('pointerdown',function(e){down=true;sx=e.clientX;sl=track.scrollLeft;track.classList.add('drag');});
+    track.addEventListener('pointermove',function(e){ if(!down)return; track.scrollLeft=sl-(e.clientX-sx); });
+    function up(){ if(!down)return; down=false; track.classList.remove('drag'); }
+    track.addEventListener('pointerup',up); track.addEventListener('pointercancel',up); track.addEventListener('pointerleave',up);
+  }
+
+  initStack(); initFolder(); initSparkles(); init3D(); initWhy(); initSwipe();
+  var pn=document.getElementById('stackNext'); if(pn)pn.classList.add('pulse');
+
+  var savedL=null;try{savedL=localStorage.getItem('sl_lang')}catch(e){}
+  setLang(savedL==='ru'?'ru':'en');
+})();
+</script>
+</body>
+</html>
